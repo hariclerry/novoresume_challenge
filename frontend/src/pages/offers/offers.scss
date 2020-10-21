@@ -1,0 +1,40 @@
+@import "../../mixins";
+
+#offers {
+    margin-top: 10rem;
+
+    h2 {
+        font-size: 4rem;
+        &:before {
+            content: unset;
+        }
+    }
+}
+
+.header-wrapper {
+    padding: 2rem;
+    background-color: #6a6ac4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+
+    @include bp-mobile {
+        flex-direction: column;
+    }
+    h3 {
+        margin: unset;
+
+        @include bp-mobile {
+            text-align: center;
+        }
+    }
+
+    .btnv-1 {
+        padding: 0.7rem 1.5rem;
+        @include bp-mobile {
+            margin-top: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import "../../mixins";
+
+section#selectProducts {
+    .product-list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 1rem;
+
+        @include bp-tablet {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include bp-mobile {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}

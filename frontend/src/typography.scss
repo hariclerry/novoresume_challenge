@@ -1,0 +1,184 @@
+/******************* Typography *******************/
+$font-bold: EuclidCircularB-Bold, "Cabin", sans-serif;
+
+$font-regular: EuclidCircularB, "probapro-regular", sans-serif;
+
+$font-regular-bold: EuclidCircularB-Bold, "probapro-bold", sans-serif;
+$font-italic: EuclidCircularB-Italic, "probapro-italic", sans-serif;
+
+$font-select: EuclidCircularB, "probapro-regular", sans-serif;
+
+$color-c: #1DBFAF;
+
+.regular-font {
+    margin-top: 0;
+    font-family: $font-regular;
+    line-height: 1.48;
+
+    @include bp-mobile {
+        line-height: 1.3;
+    }
+
+
+    i {
+        /* italic is way too much */
+        font-style: initial;
+        font-family: $font-italic;
+        line-height: 1.48;
+    }
+
+    b {
+        font-weight: bold;
+        font-family: $font-regular-bold;
+        line-height: 1.48;
+    }
+}
+
+i {
+    font-family: $font-italic;
+}
+
+.text-italic,
+.text-italic p,
+.text-italic span {
+    /* italic is way too much */
+    font-style: initial;
+    font-family: $font-italic;
+    line-height: 1.48;
+}
+
+span {
+    @extend .regular-font;
+
+    display: inline-block;
+    font-size: 1.7rem;
+}
+
+a {
+    @extend .regular-font;
+
+    text-decoration: none;
+    color: $color-c;
+    outline: $color-c;
+
+    i,
+    span {
+        cursor: pointer;
+    }
+}
+
+$font-size: 2.1rem;
+
+.text-p-size,
+a,
+a span,
+p,
+p span {
+    @extend .regular-font;
+
+    font-size: $font-size;
+}
+
+ul, ol, li {
+    font-family: $font-regular;
+}
+
+/** bold **/
+
+$h1-size: 3.4rem;
+$h1-line-height: 1.3;
+
+.text-h1-size {
+    font-size: $h1-size;
+    line-height: $h1-line-height;
+}
+
+.text-bolded,
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: $h1-size;
+    line-height: $h1-line-height;
+    font-family: $font-bold;
+    font-weight: 600;
+
+    i,
+    p,
+    span {
+        font-size: $h1-size;
+        font-family: $font-bold;
+        font-weight: 600;
+        line-height: $h1-line-height;
+        margin-bottom: 0 !important;
+    }
+}
+
+h1 {
+    margin-bottom: 10rem;
+}
+
+$h2-size: 2.5rem;
+$h2-line-height: 1.3;
+
+.text-h2-size {
+    font-size: $h2-size;
+    line-height: $h2-line-height;
+}
+
+h2 {
+    font-size: $h2-size;
+    line-height: $h2-line-height;
+    font-weight: 700;
+    margin-top: 0;
+    font-family: $font-bold;
+    margin-bottom: 2.2rem;
+
+    i,
+    p,
+    span {
+        font-size: $h2-size;
+        font-weight: 700;
+        font-family: $font-bold;
+    }
+}
+
+.text-bold,
+b,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-family: $font-bold;
+    font-weight: 600;
+    line-height: 1.48;
+    margin-bottom: 2.2rem;
+
+    i,
+    p,
+    span {
+        font-family: $font-bold;
+        font-weight: 600;
+        line-height: 1.48;
+    }
+}
+
+h3 {
+    font-size: 2.1rem;
+
+    i,
+    p,
+    span {
+        font-size: 2.1rem;
+    }
+}
+
+h4 {
+    font-size: 2rem;
+
+    i,
+    p,
+    span {
+        font-size: 2rem;
+    }
+}

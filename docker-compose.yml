@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+    frontend:
+        build:
+            context: frontend
+            dockerfile: Dockerfile
+        stdin_open: true
+        container_name: frontend
+        restart: on-failure
+        ports:
+          - "3000:3000"
+
+    backend:
+        build:
+            context: backend
+            dockerfile: Dockerfile
+        container_name: backend
+        restart: on-failure
+        ports:
+          - "5000:5000"
+
+    mongodb:
+        image: mongo:4.0.20
+        expose:
+          - "27017"
+        container_name: mongodb

@@ -1,0 +1,89 @@
+/******************* Media Queries Breakpoints *******************/
+
+html {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 1650px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@mixin bp-large {
+    @media screen and (min-width: 2100px) {
+        @content;
+    }
+}
+
+@mixin bp-big {
+    @media only screen and (min-width: 1650px) {
+        @content;
+    }
+}
+
+@mixin bp-medium {
+    @media only screen and (max-width: 1650px) {
+        @content;
+    }
+}
+
+@mixin bp-medium-segment {
+    @media only screen and (min-width: 1000px) and (max-width: 1650px) {
+        @content;
+    }
+}
+
+@mixin bp-small {
+    @media only screen and (max-width: 1350px) {
+        @content;
+    }
+}
+
+@mixin bp-small-above {
+    @media only screen and (min-width: 1350px) {
+        @content;
+    }
+}
+
+@mixin bp-small-segment {
+    @media only screen and (min-width: 1000px) and (max-width: 1350px) {
+        @content;
+    }
+}
+
+@mixin bp-tablet {
+    @media only screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin bp-tablet-segment {
+    @media only screen and (min-width: 600px) and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin bp-mobile {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin bp-phone {
+    @media only screen and (max-width: 350px) {
+        @content;
+    }
+}
