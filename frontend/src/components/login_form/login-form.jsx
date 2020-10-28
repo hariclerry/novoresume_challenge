@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import PropTypes from "prop-types";
 
-import { loginUser } from '../../calls/calls';
+import { loginUser } from '../../Api/calls';
 import './login-form.scss';
 
 import TextInput from '../text_input/text-input';
@@ -23,13 +24,15 @@ class LoginForm extends Component {
                 .then(response => {
                     if (response.status === 200) {
                         localStorage.setItem('token', response.data.token);
-                        if (response.data.user) localStorage.setItem('userId', response.data.user.id);
+                        if (response.data.userId)
+                          localStorage.setItem("userId", response.data.userId);
                         this.props.setIsLoggedIn('token' in localStorage && localStorage.token !== 'undefined');
                         this.props.hideModal();
                         this.props.history.push('/offers');
                     }
                 })
                 .catch(error => {
+                    console.log('errorrr', JSON.stringify(error));
                     if (error.response.status === 401) {
                         toast.warn('Invalid Credentials');
                     } else if (error.response.status === 404) {
@@ -48,7 +51,7 @@ class LoginForm extends Component {
                 <TextInput id="email" type="email" label="Email" onChange={event => this.onTextChange('email', event)} value={email} />
                 <TextInput
                     id="password"
-                    type="text"
+                    type="password"
                     label="Password"
                     onChange={event => this.onTextChange('password', event)}
                     value={password}
@@ -63,5 +66,11 @@ class LoginForm extends Component {
         );
     }
 }
+
+LoginForm.propTypes = {
+  setIsLoggedIn: PropTypes.func.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  showModal: PropTypes.func.isRequired,
+};
 
 export default withRouter(LoginForm);

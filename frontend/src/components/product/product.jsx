@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
 import './product.scss';
 
@@ -37,3 +38,9 @@ export default class Product extends Component {
         );
     }
 }
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  imageNumber: PropTypes.number,
+  onProductAmountChange: PropTypes.func.isRequired,
+};

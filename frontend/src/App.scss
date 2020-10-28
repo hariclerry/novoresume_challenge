@@ -3,6 +3,7 @@
 
 $btn-color-green: #00c8aa;
 $color-a: #303d46;
+$color-a-light: #E1E1E1;
 $color-a-dark: #242d33;
 $color-e: #1eaedb;
 $color-b: #ffd43b;
@@ -177,8 +178,9 @@ h2 {
 
 /** generic btn 2 **/
 .btnv-2 {
-    background-color: $color-a;
-    border-color: $color-a;
+    background-color: $color-a-light;
+    border-color: $color-a-light;
+    color: $color-a-dark;
 }
 
 .btnv-cta {

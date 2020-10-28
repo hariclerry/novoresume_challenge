@@ -5,13 +5,15 @@ const fs = require('fs');
 const app = require('express')();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-const users = require('./routes/users');
+const dotenv = require("dotenv");
+
+const users = require('./src/routes/users');
 const PORT = 5000;
 
 dotenv.config();
 
 app.use(cors());
+// app.use(cors({ exposedHeaders: ["Content-Disposition"] }));
 app.use( bodyParser.json() ); 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/users', users);

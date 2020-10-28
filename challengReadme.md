@@ -100,3 +100,5 @@ Frontend
     The landing page is implemented to be responsive.
 2. Adding the images to the PDF 
     I tried adding the images to the PDF but as mentioned, this is a bit more complicated. The solution that was hoping to implement woulb be possible if the images were hosted/stored remotely for example on Cloudinary or AWS S3 buckets, perhaps this can still be done with the current implementation, I hope to find out! As per the current implementation, the PDF is generated without the product images.
+
+

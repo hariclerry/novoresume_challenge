@@ -1,0 +1,70 @@
+@import "../../mixins";
+
+#main-header {
+  background-color: #6a6ac4;
+  padding: 8rem 0 11rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+     @media screen and (max-width: 460px) {
+     padding: 3rem 0 11rem 0;
+    }
+  .flex-row {
+    @media screen and (max-width: 460px) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+    .header-img {
+      @media screen and (max-width: 460px) {
+        padding-left: 0;
+      }
+      padding-left: 35px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .header-mid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 40px;
+      padding-right: 20px;
+      @media screen and (max-width: 460px) {
+        padding-top: 30px;
+        padding-right: 10px;
+      }
+      h1 {
+        font-size: 4rem;
+         @media screen and (max-width: 460px) {
+     font-size: 2.8rem;
+     margin-bottom: 3rem;
+    }
+      }
+      .header-text2 {
+        font-size: 2.3rem;
+        padding-bottom: 30px;
+        @media screen and (max-width: 460px) {
+          padding-bottom: 20px;
+          font-size: 1.8rem;
+        }
+      }
+      span {
+        .btnv-1 {
+          line-height: 0;
+          padding: 3.5rem !important;
+          font-size: 2.5rem !important;
+          text-align: center;
+          width: 230px;
+          height: 35px;
+
+          @media screen and (max-width: 460px) {
+            width: 100%;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+}

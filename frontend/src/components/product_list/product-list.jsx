@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
+
 import Product from '../product/product';
 
 import './product-list.scss';
@@ -27,3 +29,9 @@ export default class ProductList extends Component {
         );
     }
 }
+
+ProductList.propTypes = {
+  products: PropTypes.array.isRequired,
+  saveProducts: PropTypes.func.isRequired,
+  onProductAmountChange: PropTypes.func.isRequired,
+};

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { toast } from 'react-toastify';
+import PropTypes from "prop-types";
 
-import { registerUser } from '../../calls/calls';
+import { registerUser } from '../../Api/calls';
 import './registration-form.scss';
 import TextInput from '../text_input/text-input';
 
@@ -60,7 +61,7 @@ export default class RegistrationForm extends Component {
                 <TextInput id="email" type="email" label="Email" onChange={event => this.onTextChange('email', event)} value={email} />
                 <TextInput
                     id="password"
-                    type="text"
+                    type="password"
                     label="Password"
                     onChange={event => this.onTextChange('password', event)}
                     value={password}
@@ -75,3 +76,8 @@ export default class RegistrationForm extends Component {
         );
     }
 }
+
+RegistrationForm.propTypes = {
+  hideModal: PropTypes.func.isRequired,
+  showModal: PropTypes.func.isRequired,
+};

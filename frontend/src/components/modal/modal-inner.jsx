@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from "prop-types";
 
 import onClickOutside from 'react-onclickoutside';
 
@@ -16,5 +17,10 @@ var clickOutsideConfig = {
     handleClickOutside: instance => {
         return instance.handleClickOutsideModal;
     }
+};
+
+ModalInner.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+  children: PropTypes.element,
 };
 export default onClickOutside(ModalInner, clickOutsideConfig);

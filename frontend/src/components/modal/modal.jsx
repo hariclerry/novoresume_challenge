@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
 import ModalInner from './modal-inner';
 import './modal.scss';
@@ -16,3 +17,9 @@ export default class Modal extends Component {
         );
     }
 }
+
+Modal.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+  show: PropTypes.string.isRequired,
+  children: PropTypes.element,
+};

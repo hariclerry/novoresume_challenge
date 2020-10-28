@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
+
 import './navbar.scss';
 
 class Navbar extends Component {
@@ -22,7 +24,7 @@ class Navbar extends Component {
                                 <span>Register</span>
                             </li>
                             <li className="btnv-2" onClick={() => showModal('login')}>
-                                <span>Log In</span>
+                                <span>Sign In</span>
                             </li>
                         </ul>
                     ) : (
@@ -37,5 +39,11 @@ class Navbar extends Component {
         );
     }
 }
+
+Navbar.propTypes = {
+  showModal: PropTypes.func.isRequired,
+  setIsLoggedIn: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
+};
 
 export default withRouter(Navbar);
