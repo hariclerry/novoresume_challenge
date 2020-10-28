@@ -15,10 +15,10 @@ Frontend
 - [Docker](https://docs.docker.com/get-docker/)
 - [Wkhtmltopdf](https://wkhtmltopdf.org/downloads.html)
 
-`NB:` Incase you are having issues with browser secure connection, You might want generate new certificates/keys and replace the keys and certs in the backend with the new ones. 
+`NB:` Incase you are having issues with browser secure connections issues, You might want to generate new certificates/keys and replace the keys and certs in the backend with the new ones. 
 
 ### App setup and installation:
-- Clone the repository here and checkout to this branch
+- Clone the repository [here](https://github.com/hariclerry/novoresume_challenge/tree/novoresume-fullstack-challenge) 
 - Cd into the `novoresume_challenge`
 
 #### *To run the app locally without Docker:*
@@ -75,13 +75,13 @@ npm run test
 
 #### Implementations/Requirements
 1. Write unit test for the login function in backend
-   I installed and setup jest as the testing library, added unit test for the login functionality. See above command on how to run tests.
-2. Implemented login functionality for backend 
-   I implemented the login functionality as per the requirements and added authentication using JSON Web Tokens.
+   - I installed and setup jest as the testing library, added unit test for the login functionality. See above command on how to run tests.
+2. Implement login functionality for backend 
+   - I implemented the login functionality as per the requirements and added authentication using JSON Web Tokens.
 3. Implemented the functionality to generate the HTML for the PDF of the offer in front-end
-   I implemented the PDF generation functionality whereby after a user has selected and saved products with their billing information, they are able to generate offers converted to PDF formate. I would like to point out here that, I have not yet managed to add footer to the PDF. I have tried implementing it using the --html-footer flag in the application but run into some issues with Wkhtmltopdf and because of time constraint, I have left the footer blank for now.
+    - I implemented the PDF generation functionality whereby after a user has selected and saved products with their billing information, they are able to generate offers converted to PDF formate. I would like to point out here that, I have not yet managed to add footer to the PDF. I have tried implementing it using the --html-footer flag in the application but run into some issues with Wkhtmltopdf and because of time constraint, I have left the footer blank for now.
 4. Implemented the landing page in front-end
-   I have implemented the landing page as per the requirement from the given mockup.
+   - I have implemented the landing page as per the requirement from the given mockup.
 
 #### Changes made
 
@@ -93,10 +93,10 @@ Frontend
  - Setup testing using Jest test runner and Enzymes testing utility
  - Wrote tests for the implemented components and functionalities
  - Added type checking using Proptypes library
- - Setup configuration for absolute imports in jsconfig.json file. This is just for Better Readability and Easy Refactoring
+ - Setup configuration for absolute imports in jsconfig.json file. This is just for better code readability and easy Refactoring
 
  #### Bonus
  1. Making the page responsive
-    The landing page is implemented to be responsive.
+    - The landing page is implemented to be responsive.
 2. Adding the images to the PDF 
-    I tried adding the images to the PDF but as mentioned, this is a bit more complicated. The solution that was hoping to implement woulb be possible if the images were hosted/stored remotely for example on Cloudinary or AWS S3 buckets, perhaps this can still be done with the current implementation, I hope to find out! As per the current implementation, the PDF is generated without the product images.
+    - I tried adding the images to the PDF but as mentioned, this is a bit more complicated. The solution that was hoping to implement woulb be possible if the images were hosted/stored remotely for example on Cloudinary or AWS S3 buckets, perhaps this can still be done with the current implementation, I hope to find out! As per the current implementation, the PDF is generated without the product images.
